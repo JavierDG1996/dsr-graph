@@ -1,0 +1,2 @@
+/opt/robocomp/etc-default/elastic_band.conf
+/opt/robocomp/bin/elastic_band

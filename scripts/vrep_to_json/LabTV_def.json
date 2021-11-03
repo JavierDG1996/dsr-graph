@@ -1,0 +1,2946 @@
+{
+    "DSRModel": {
+        "symbols": {
+            "1": {
+                "attribute": {
+                    "OuterRegionBottom": {
+                        "type": 1,
+                        "value": -7500
+                    },
+                    "OuterRegionLeft": {
+                        "type": 1,
+                        "value": -7500
+                    },
+                    "OuterRegionRight": {
+                        "type": 1,
+                        "value": 7500
+                    },
+                    "OuterRegionTop": {
+                        "type": 1,
+                        "value": 7500
+                    },
+                    "color": {
+                        "type": 0,
+                        "value": "SeaGreen"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "0"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -150
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 86
+                    }
+                },
+                "id": "1",
+                "links": [
+                    {
+                        "dst": "200",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "2",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.5707937957238332
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -3206.951,
+                                    2274.8650000000002,
+                                    1225.4750000000001
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "3",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.5707940749762779
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    267.28200000000004,
+                                    2348.887,
+                                    1225.478
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "4",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.5708205690519443
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -838.707,
+                                    -1753.106,
+                                    1225.479
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "5",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.570792870700111
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -3206.9260000000004,
+                                    -6050.056,
+                                    1225.479
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "6",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.570792870700111
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    267.305,
+                                    -6126.043000000001,
+                                    1225.482
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "7",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    3188.2980000000002,
+                                    -4453.037,
+                                    1225.481
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "8",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.570792870700111
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    4233.299,
+                                    -3584.04,
+                                    1225.481
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "9",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    5279.831999999999,
+                                    -2631.5029999999997,
+                                    1228.45
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "10",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    3188.282,
+                                    1046.895,
+                                    1225.479
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "11",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    5329.831,
+                                    -331.512,
+                                    1228.45
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "12",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.570792870700111
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    4258.286,
+                                    240.897,
+                                    1225.4799999999998
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "13",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -3925.933,
+                                    -4425.057,
+                                    1225.4769999999999
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "14",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    2825.288,
+                                    782.8929999999999,
+                                    449.47900000000004
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "15",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    1850.283,
+                                    1999.884,
+                                    450.478
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "16",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.740164611111111e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -3925.9460000000004,
+                                    674.877,
+                                    1225.476
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "17",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -1.5707955410516112,
+                                    -2.862337555555555e-06,
+                                    -1.5707969896736664
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -3299.9390000000003,
+                                    -798.1160000000001,
+                                    1227.476
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "18",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0.0,
+                                    1.570795,
+                                    3.141589458948389
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -2817.708,
+                                    -1301.132,
+                                    1227.478
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "19",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -1.5707955410516112,
+                                    -2.809977722222222e-06,
+                                    -1.570797129299889
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -3299.935,
+                                    -2923.096,
+                                    1227.476
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "20",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0.0,
+                                    1.570795,
+                                    3.141589458948389
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -2817.7059999999997,
+                                    -2426.105,
+                                    1227.478
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "21",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    -1.5708205690519443
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    3269.2929999999997,
+                                    -1746.106,
+                                    1225.479
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "22",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -0.0,
+                                    0.0,
+                                    1.5707943367754442
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -2100.0,
+                                    -5074.998,
+                                    647.5600000000001
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "23",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -0.0,
+                                    0.0,
+                                    1.5707960646499446
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    1599.999,
+                                    -5025.0,
+                                    647.5600000000001
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "24",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -0.0,
+                                    0.0,
+                                    -0.0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -300.0,
+                                    -5549.999,
+                                    647.5600000000001
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "25",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -0.0,
+                                    0.0,
+                                    -0.0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0.0,
+                                    25.0,
+                                    -60.0
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "26",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -5.632172738888888e-05,
+                                    -0.0,
+                                    -1.5708180383266668
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    105.007,
+                                    1983.773,
+                                    909.74
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "27",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -0.0,
+                                    0.0,
+                                    -0.0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -1749.999,
+                                    275.0,
+                                    385.0
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "28",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -4.886917777777777e-07,
+                                    -5.235983333333333e-07,
+                                    2.3038326666666666e-06
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    2940.2889999999998,
+                                    658.8929999999999,
+                                    1774.481
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "29",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -0.0,
+                                    0.0,
+                                    -0.0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0.0,
+                                    -1320.0,
+                                    700.0
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    },
+                    {
+                        "dst": "30",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    -0.0,
+                                    0.0,
+                                    -0.0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0.0,
+                                    -1400.0,
+                                    200.0
+                                ]
+                            }
+                        },
+                        "src": "1"
+                    }
+                ],
+                "name": "world",
+                "type": "world"
+            },
+            "10": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 2490
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -8
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -19
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ddf7e3"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "10",
+                "links": [],
+                "name": "Wall2",
+                "type": "plane"
+            },
+            "1000": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Magenta"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 2
+                    },
+                    "mass": {
+                        "type": 1,
+                        "value": 2
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "200"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -278.689453
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -3.151021
+                    }
+                },
+                "id": "1000",
+                "links": [],
+                "name": "mind",
+                "type": "transform"
+            },
+            "11": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2464
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1030
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -178
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 122
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#d8d8d8"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 123
+                    }
+                },
+                "id": "11",
+                "links": [],
+                "name": "Wall5",
+                "type": "plane"
+            },
+            "12": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 2009
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -110
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 113
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#dbdbdb"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "12",
+                "links": [],
+                "name": "Wall4",
+                "type": "plane"
+            },
+            "13": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 2940
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 167
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -135
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#f7dddd"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 270
+                    }
+                },
+                "id": "13",
+                "links": [],
+                "name": "Wall7",
+                "type": "plane"
+            },
+            "14": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 900
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1900
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -76
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -75
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 600
+                    }
+                },
+                "id": "14",
+                "links": [],
+                "name": "kitchen_table_1",
+                "type": "mesh"
+            },
+            "15": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 900
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 600
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -25
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -87
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 2600
+                    }
+                },
+                "id": "15",
+                "links": [],
+                "name": "kitchen_table_2",
+                "type": "mesh"
+            },
+            "16": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 2940
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -121
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 39
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ddefdd"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 270
+                    }
+                },
+                "id": "16",
+                "links": [],
+                "name": "Wall16",
+                "type": "plane"
+            },
+            "17": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 970
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -104
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 85
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ffffff"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 2400
+                    }
+                },
+                "id": "17",
+                "links": [],
+                "name": "Wall8",
+                "type": "plane"
+            },
+            "18": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1000
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -5
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 27
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ffffff"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 2400
+                    }
+                },
+                "id": "18",
+                "links": [],
+                "name": "Wall9",
+                "type": "plane"
+            },
+            "19": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 970
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 95
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -53
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ffffff"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 2400
+                    }
+                },
+                "id": "19",
+                "links": [],
+                "name": "Wall17",
+                "type": "plane"
+            },
+            "2": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1180
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -141
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 55
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#dbf4db"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 270
+                    }
+                },
+                "id": "2",
+                "links": [],
+                "name": "200cmWall0",
+                "type": "plane"
+            },
+            "20": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1000
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -107
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -189
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ffffff"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 2400
+                    }
+                },
+                "id": "20",
+                "links": [],
+                "name": "Wall18",
+                "type": "plane"
+            },
+            "200": {
+                "attribute": {
+                    "base_target_x": {
+                        "type": 2,
+                        "value": 3600
+                    },
+                    "base_target_y": {
+                        "type": 2,
+                        "value": 1550
+                    },
+                    "color": {
+                        "type": 0,
+                        "value": "Blue"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "port": {
+                        "type": 1,
+                        "value": 12238
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -174.637238
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -74.730019
+                    },
+                    "robot_ref_adv_speed": {
+                        "type": 2,
+                        "value": 0
+                    },
+                    "robot_ref_rot_speed": {
+                        "type": 2,
+                        "value": 0
+                    },
+                    "robot_ref_side_speed": {
+                        "type": 2,
+                        "value": 0
+                    }
+                },
+                "id": "200",
+                "links": [
+                    {
+                        "dst": "500",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "200"
+                    },
+                    {
+                        "dst": "1000",
+                        "label": "has",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "200"
+                    }
+                ],
+                "name": "robot",
+                "type": "omnirobot"
+            },
+            "201": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 3
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "500"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "../../etc/viriato_base_concept_3/viriato_mesh.ive"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -297.580231
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -332.255524
+                    },
+                    "scalex": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "scaley": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "scalez": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1
+                    }
+                },
+                "id": "201",
+                "links": [],
+                "name": "viriato_mesh",
+                "type": "mesh"
+            },
+            "202": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "SteelBlue"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 3
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "500"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -103.442307
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -248.4133
+                    }
+                },
+                "id": "202",
+                "links": [
+                    {
+                        "dst": "203",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "202"
+                    },
+                    {
+                        "dst": "204",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    100,
+                                    0,
+                                    100
+                                ]
+                            }
+                        },
+                        "src": "202"
+                    },
+                    {
+                        "dst": "205",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    -100,
+                                    0,
+                                    -100
+                                ]
+                            }
+                        },
+                        "src": "202"
+                    }
+                ],
+                "name": "laser_pose",
+                "type": "transform"
+            },
+            "203": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "GreenYellow"
+                    },
+                    "laser_angles": {
+                        "type": 3,
+                        "value": []
+                    },
+                    "laser_dists": {
+                        "type": 3,
+                        "value": []
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 4
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "202"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 56.066166
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -253.351563
+                    }
+                },
+                "id": "203",
+                "links": [],
+                "name": "laser",
+                "type": "laser"
+            },
+            "204": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 4
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "202"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -40.584343
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -161.594437
+                    },
+                    "scalex": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "scaley": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "scalez": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1
+                    }
+                },
+                "id": "204",
+                "links": [],
+                "name": "laser1",
+                "type": "mesh"
+            },
+            "205": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 4
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "202"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 19.227972
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -201.698074
+                    },
+                    "scalex": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "scaley": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "scalez": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1
+                    }
+                },
+                "id": "205",
+                "links": [],
+                "name": "laser2",
+                "type": "mesh"
+            },
+            "206": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "SteelBlue"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 3
+                    },
+                    "mass": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "500"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -379.181976
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -204.563416
+                    },
+                    "viriato_head_pan_tilt_nose_target": {
+                        "type": 3,
+                        "value": [
+                            1000,
+                            0,
+                            0
+                        ]
+                    }
+                },
+                "id": "206",
+                "links": [
+                    {
+                        "dst": "207",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    -0.0005755375605076551
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "206"
+                    }
+                ],
+                "name": "viriato_head_camera_pan_tilt",
+                "type": "pan_tilt"
+            },
+            "207": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "SteelBlue"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 4
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "206"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -410.591095
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -282.490997
+                    }
+                },
+                "id": "207",
+                "links": [
+                    {
+                        "dst": "208",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0.0011809815187007189,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "207"
+                    }
+                ],
+                "name": "viriato_head_camera_pan_joint",
+                "type": "transform"
+            },
+            "208": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "SteelBlue"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 5
+                    },
+                    "mass": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "207"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -466.174591
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -250.67131
+                    }
+                },
+                "id": "208",
+                "links": [
+                    {
+                        "dst": "209",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "208"
+                    }
+                ],
+                "name": "viriato_head_camera_tilt_joint",
+                "type": "transform"
+            },
+            "209": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "SteelBlue"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 6
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "208"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -463.527924
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -163.424591
+                    }
+                },
+                "id": "209",
+                "links": [
+                    {
+                        "dst": "210",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "209"
+                    }
+                ],
+                "name": "camera_pose",
+                "type": "transform"
+            },
+            "21": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 4047
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 173
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 39
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ed7a00"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "21",
+                "links": [],
+                "name": "Wall6",
+                "type": "plane"
+            },
+            "210": {
+                "attribute": {
+                    "cam_depth": {
+                        "type": 5,
+                        "value": []
+                    },
+                    "cam_depthFactor": {
+                        "type": 2,
+                        "value": 1
+                    },
+                    "cam_depth_alivetime": {
+                        "type": 1,
+                        "value": 1620400089
+                    },
+                    "cam_depth_cameraID": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "cam_depth_focalx": {
+                        "type": 1,
+                        "value": 554
+                    },
+                    "cam_depth_focaly": {
+                        "type": 1,
+                        "value": 554
+                    },
+                    "cam_depth_height": {
+                        "type": 1,
+                        "value": 480
+                    },
+                    "cam_depth_width": {
+                        "type": 1,
+                        "value": 640
+                    },
+                    "cam_rgb": {
+                        "type": 5,
+                        "value": []
+                    },
+                    "cam_rgb_alivetime": {
+                        "type": 1,
+                        "value": 1620400089
+                    },
+                    "cam_rgb_cameraID": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "cam_rgb_depth": {
+                        "type": 1,
+                        "value": 3
+                    },
+                    "cam_rgb_focalx": {
+                        "type": 1,
+                        "value": 554
+                    },
+                    "cam_rgb_focaly": {
+                        "type": 1,
+                        "value": 554
+                    },
+                    "cam_rgb_height": {
+                        "type": 1,
+                        "value": 480
+                    },
+                    "cam_rgb_width": {
+                        "type": 1,
+                        "value": 640
+                    },
+                    "color": {
+                        "type": 0,
+                        "value": "Blue"
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 480
+                    },
+                    "ifconfig": {
+                        "type": 0,
+                        "value": "40000,50000"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 7
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "209"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -426.629547
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -86.217537
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 640
+                    }
+                },
+                "id": "210",
+                "links": [],
+                "name": "viriato_head_camera_sensor",
+                "type": "rgbd"
+            },
+            "22": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 100
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 896
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 52
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 38
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1696
+                    }
+                },
+                "id": "22",
+                "links": [],
+                "name": "customizableTable",
+                "type": "mesh"
+            },
+            "220": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Orange"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 3
+                    },
+                    "mass": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "500"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -177.976257
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -303.349243
+                    },
+                    "viriato_left_arm_target": {
+                        "type": 3,
+                        "value": [
+                            -237,
+                            312,
+                            516,
+                            2.799999952316284,
+                            0,
+                            1.6820000410079956
+                        ]
+                    }
+                },
+                "id": "220",
+                "links": [],
+                "name": "viriato_left_arm_tip",
+                "type": "left_hand"
+            },
+            "23": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 100
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 896
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 63
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -49
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1696
+                    }
+                },
+                "id": "23",
+                "links": [],
+                "name": "customizableTable#0",
+                "type": "mesh"
+            },
+            "24": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 100
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 799
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -68
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -143
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1497
+                    }
+                },
+                "id": "24",
+                "links": [],
+                "name": "customizableTable#1",
+                "type": "mesh"
+            },
+            "25": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 120
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 15000
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 110
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -139
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#999999"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 15000
+                    }
+                },
+                "id": "25",
+                "links": [],
+                "name": "infiniteFloor",
+                "type": "plane"
+            },
+            "26": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 1800
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 600
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 172
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 144
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 600
+                    }
+                },
+                "id": "26",
+                "links": [],
+                "name": "Fridge",
+                "type": "mesh"
+            },
+            "27": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 770
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1200
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 163
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -43
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1200
+                    }
+                },
+                "id": "27",
+                "links": [],
+                "name": "round_table",
+                "type": "mesh"
+            },
+            "28": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 600
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1400
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 22
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -38
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 400
+                    }
+                },
+                "id": "28",
+                "links": [],
+                "name": "kitchen_table_4",
+                "type": "mesh"
+            },
+            "29": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 600
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 100
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -30
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -6
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 1120
+                    }
+                },
+                "id": "29",
+                "links": [],
+                "name": "Cuboid0",
+                "type": "mesh"
+            },
+            "3": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 5770
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 128
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 91
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ddf7dd"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "3",
+                "links": [],
+                "name": "Wall1",
+                "type": "plane"
+            },
+            "30": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "LightBlue"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 500
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "path": {
+                        "type": 0,
+                        "value": "/home/robocomp/robocomp/files/osgModels/basics/cube2.3ds"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 160
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 66
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 500
+                    }
+                },
+                "id": "30",
+                "links": [],
+                "name": "Cuboid1",
+                "type": "mesh"
+            },
+            "4": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 4200
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 113
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -197
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#ed7a00"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "4",
+                "links": [],
+                "name": "Wall10",
+                "type": "plane"
+            },
+            "5": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1180
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -13
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -48
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#f4dddd"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 270
+                    }
+                },
+                "id": "5",
+                "links": [],
+                "name": "Wall11",
+                "type": "plane"
+            },
+            "500": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Orange"
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 2
+                    },
+                    "mass": {
+                        "type": 1,
+                        "value": 0
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "200"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -263.540405
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -147.869156
+                    }
+                },
+                "id": "500",
+                "links": [
+                    {
+                        "dst": "201",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    1.5700000524520874
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    200
+                                ]
+                            }
+                        },
+                        "src": "500"
+                    },
+                    {
+                        "dst": "202",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    400,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "500"
+                    },
+                    {
+                        "dst": "206",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    57,
+                                    1368
+                                ]
+                            }
+                        },
+                        "src": "500"
+                    },
+                    {
+                        "dst": "220",
+                        "label": "RT",
+                        "linkAttribute": {
+                            "rt_rotation_euler_xyz": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "rt_translation": {
+                                "type": 3,
+                                "value": [
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            }
+                        },
+                        "src": "500"
+                    }
+                ],
+                "name": "body",
+                "type": "transform"
+            },
+            "6": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 5770
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -90
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -159
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#f7dbdb"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "6",
+                "links": [],
+                "name": "Wall12",
+                "type": "plane"
+            },
+            "7": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 3501
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 38
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 17
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#f7dbd8"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "7",
+                "links": [],
+                "name": "Wall13",
+                "type": "plane"
+            },
+            "8": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2400
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 2009
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": -108
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": -175
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#f7dddd"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 120
+                    }
+                },
+                "id": "8",
+                "links": [],
+                "name": "Wall14",
+                "type": "plane"
+            },
+            "9": {
+                "attribute": {
+                    "color": {
+                        "type": 0,
+                        "value": "Khaki"
+                    },
+                    "depth": {
+                        "type": 1,
+                        "value": 2464
+                    },
+                    "height": {
+                        "type": 1,
+                        "value": 1625
+                    },
+                    "level": {
+                        "type": 1,
+                        "value": 1
+                    },
+                    "parent": {
+                        "type": 7,
+                        "value": "1"
+                    },
+                    "pos_x": {
+                        "type": 2,
+                        "value": 55
+                    },
+                    "pos_y": {
+                        "type": 2,
+                        "value": 31
+                    },
+                    "texture": {
+                        "type": 0,
+                        "value": "#f7dddd"
+                    },
+                    "width": {
+                        "type": 1,
+                        "value": 123
+                    }
+                },
+                "id": "9",
+                "links": [],
+                "name": "Wall15",
+                "type": "plane"
+            }
+        }
+    }
+}

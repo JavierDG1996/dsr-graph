@@ -1,0 +1,2 @@
+/opt/robocomp/etc-default/path_follower.conf
+/opt/robocomp/bin/path_follower

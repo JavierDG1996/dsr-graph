@@ -1,0 +1,2 @@
+/opt/robocomp/etc-default/idserver.conf
+/opt/robocomp/bin/idserver

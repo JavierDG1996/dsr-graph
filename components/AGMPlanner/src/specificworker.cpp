@@ -125,7 +125,8 @@ void SpecificWorker::compute()
 
   //We write the dsr JSON
   printf("writing JSON\n");
-  G->write_to_json_file(dsr_output_path + agent_name + "_" + std::to_string(output_file_count) + ".json");
+  auto file = dsr_output_path + agent_name + "_" + std::to_string(output_file_count) + ".json";
+  G->write_to_json_file(file);
   output_file_count++;
   
 
@@ -148,11 +149,13 @@ void SpecificWorker::compute()
   
   RoboCompAGGLPlanner::Parameters ParameterList;
   ParameterList.pythonarg = "python3 ";
-  ParameterList.agglplanarg = "../../../../AGM/AGGLPlanner/agglplan.py "; 
-  ParameterList.agglfile = "examples/logistics/domain.aggl "; //Ruleset
-  ParameterList.initfile = "examples/logistics/init0.xml "; //init world xml
+  ParameterList.agglplanarg = "../../../../../software/AGM/AGGLPlanner/agglplan.py ";
+  //ParameterList.agglfile = "examples/logistics/domain.aggl "; //Ruleset
+  ParameterList.agglfile = "/home/javier/robocomp/components/robocomp-viriato/aggl_plans/change_room2.aggl "; //Ruleset
+  //ParameterList.initfile = "examples/logistics/init0.xml "; //init world xml
+  ParameterList.initfile = "/home/javier/robocomp/components/dsr-graph/components/AGMPlanner/"+file+" "; //init world xml
   ParameterList.aggtgoal = "examples/logistics/prueba0.aggt "; // goal file
-  ParameterList.resultplan = "examples/logistics/resultado.plan "; //plan result file
+  ParameterList.resultplan = "examples/logistics/resultadoOLEEEE.plan "; //plan result file
   
   this->agglplanner_proxy->AGGlplannerexecution(ParameterList); //Calling the interface implemented in AGMPlannerPython component.
   printf("done\n");

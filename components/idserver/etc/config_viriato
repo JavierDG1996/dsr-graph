@@ -13,14 +13,23 @@ agent_name = idserver
 #dsr_input_file = ../../etc/autonomyLab_one_room.simscene.json
 #dsr_input_file = ../../etc/autonomyLab_two_rooms_no_objects.simscene.json
 #dsr_input_file = ../../etc/autonomyLab_two_rooms_no_objects_development.simscene.json
-dsr_input_file = ../../etc/autonomyLab_objects.simscene.json
+#dsr_input_file = ../../etc/autonomyLab_objects.simscene.json
+dsr_input_file = ../../etc/autonomyLab_objectsWithTV.simscene.json
+#dsr_input_file = ../../etc/autonomyLab_Residencia.json
+#dsr_input_file = ../../etc/PruebaTV.json
+#dsr_input_file = ../../etc/autonomyLab_objectsWithTV_ANCHO.simscene.json
+#dsr_input_file = ../../etc/autonomyLab_SIMPLINO.json
+#dsr_input_file = ../../etc/Simple.json
+#dsr_input_file = ../../scripts/vrep_to_json/Exterior.json
+#dsr_input_file = ../../scripts/vrep_to_json/LabTV.json
+#dsr_input_file = ../../etc/informatica_dsr_4.json
 
 
 
 tree_view = false
 graph_view = true
-2d_view = false
-3d_view = false
+2d_view = true
+3d_view = true
 
 dsr_output_path = ../../etc/
 dsr_write_to_file = false

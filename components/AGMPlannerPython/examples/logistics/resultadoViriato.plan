@@ -1,0 +1,5 @@
+goToPerson@{'p': '900', 'robot': '200'}
+takeTheAttention@{'robot': '200', 'p': '900'}
+askForIndividualPermission@{'p': '900', 'robot': '200'}
+changeRoom@{'robot': '200', 'room1': u'50', 'room2': u'60'}
+# time: 0.094273

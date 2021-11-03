@@ -8,8 +8,16 @@ FullPoseEstimation.Endpoints=tcp -p 10016
 # Endpoints for subscriptions interfaces
 JoystickAdapterTopic.Endpoints=tcp -p 13100
 
-coppelia_file = ../../etc/autonomy_lab_no_arm_no_middle_wall.ttt
+#coppelia_file = ../../etc/autonomy_lab_no_arm_bill.ttt
+#coppelia_file = ../../etc/autonomy_lab_bill.ttt
+#coppelia_file = ../../etc/autonomy_lab_no_arm_no_middle_wall.ttt
+#coppelia_file = ../../etc/autonomy_lab_no_arm_no_middle_wall_yes_TV.ttt
 #coppelia_file = ../../etc/aztide-new.ttt
+#coppelia_file = ../../etc/autonomy_lab_PRUEBA_FUERZAS SOCIALES.ttt
+coppelia_file = ../../etc/autonomy_lab_PRUEBA_FUERZAS SOCIALES_TV.ttt
+#coppelia_file = ../../etc/autonomy_lab_PRUEBA_FUERZAS SOCIALES_TV_ExpFinal2.ttt
+#coppelia_file = ../../etc/autonomy_lab_PRUEBA_FUERZAS_SOCIALES_SIMPLE.ttt
+#coppelia_file = ../../etc/autonomy_lab_PRUEBA_FUERZAS_SOCIALES_SIMPLE_DOS_PERSONAS.ttt
 
 
 # This property is used by the clients to connect to IceStorm.

@@ -1,0 +1,2 @@
+/opt/robocomp/etc-default/path_planner_astar.conf
+/opt/robocomp/bin/path_planner_astar

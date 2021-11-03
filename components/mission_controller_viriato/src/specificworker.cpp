@@ -133,6 +133,7 @@ void SpecificWorker::compute()
     static std::chrono::steady_clock::time_point begin, lastPathStep;
     static int last_selected_index = custom_widget.comboBox_select_target->currentIndex();
     static uint last_path_size;
+    static QVector<QPointF> points;/// MÉTRICAS
 
     // check for existing missions
     static Plan plan;
@@ -155,6 +156,7 @@ void SpecificWorker::compute()
                 begin = lastPathStep = std::chrono::steady_clock::now();
                 last_path_size = path.value().size();
                 auto dist = 0;
+                points.clear();/// MÉTRICAS
                 for (uint i = 0; i < path.value().size() - 1; ++i)
                     dist = dist + (path.value()[i] - path.value()[i + 1]).norm();
 
@@ -168,6 +170,17 @@ void SpecificWorker::compute()
             if (last_path_size != path.value().size())
                 lastPathStep = std::chrono::steady_clock::now();
             float dist = (robot_pose - plan.get_target_trans()).norm();
+
+            /// MÉTRICAS
+
+            QPointF robot_point(robot_pose.x(),robot_pose.y());
+            qInfo() << __FUNCTION__ << " Robot posicion X: " << robot_point.x() << " posicion Y: " << robot_point.y();
+
+            points.append(robot_point);
+            qInfo() << __FUNCTION__ << " TAMANIO: " << points.length();
+
+            /// MÉTRICAS - FIN
+
             auto now = std::chrono::steady_clock::now();
             auto time_delta_s = std::chrono::duration_cast<std::chrono::milliseconds>(now - lastPathStep).count();
             qInfo() << __FUNCTION__ << "Tiempo desde el último paso: " << time_delta_s << "s";
@@ -181,6 +194,165 @@ void SpecificWorker::compute()
                 std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
                 auto d=std::chrono::duration_cast<std::chrono::seconds>(end - begin).count();
                 qInfo() << __FUNCTION__ << " Tiempo: " << d << " s";
+
+
+                /// MÉTRICAS ROBOT
+                qInfo() << __FUNCTION__ << " TERMINADOOOOOOOOOOOOO ";
+                qInfo() << __FUNCTION__ << " Robot última posicion X: " << robot_pose.x() << " posicion Y: " << robot_pose.y();
+                qInfo() << __FUNCTION__ << " TAMANIO TOTAL: " << points.length();
+
+                ofstream file("robotpose1.txt", ofstream::out);
+                for (auto p: points)
+                    file<<p.x() << " " <<p.y()<< endl;
+
+                file.close();
+
+                /// MÉTRICAS HUMANOS
+                if(auto humans = G->get_nodes_by_type(person_type_name); not humans.empty())
+                {
+                    ofstream file2("personpose.txt", ofstream::out);
+
+                    for( const auto &human : humans)
+                    {
+                        auto person_pose = inner_eigen->transform(world_name, human.name()).value();
+
+                        qInfo() << __FUNCTION__ << " Person posicion X: " << person_pose.x() << " posicion Y: " << person_pose.y();
+                        file2<<person_pose.x() << " " <<person_pose.y()<< " " << 0 << endl;
+                    }
+                    qInfo() << __FUNCTION__ << " PERSONAS TAMANIO: " << humans.size();
+                    file2.close();
+                }
+
+                /// MÉTRICAS POLILÍNEAS
+                if(auto personal_space = G->get_nodes_by_type(personal_space_type_name); not personal_space.empty())
+                {
+
+                    qInfo() << __FUNCTION__ << " POLYLINES: " << personal_space.size();
+                    ofstream file3("polyline_social.txt", ofstream::out);
+                    ofstream file4("polyline_personal.txt", ofstream::out);
+                    ofstream file5("polyline_intimate.txt", ofstream::out);
+                    for( const auto &p_space : personal_space)
+                    {
+                        ///SOCIAL POLY
+                        const auto social_x_o = G->get_attrib_by_name<ps_social_x_pos_att>(p_space);
+                        const auto social_y_o = G->get_attrib_by_name<ps_social_y_pos_att>(p_space);
+                        if( social_x_o.has_value() and social_y_o.has_value())
+                        {
+
+                            const std::vector<float> &social_x = social_x_o.value().get();
+                            const std::vector<float> &social_y = social_y_o.value().get();
+                            for(auto &&[point_x,point_y] : iter::zip(social_x, social_y))
+                            {
+                                qInfo() << __FUNCTION__ << " Social posicion X: " << point_x << " posicion Y: " << point_y;
+                                file3<<point_x << " " <<point_y<< endl;
+                            }
+                            file3 << " "<<endl;
+                        }
+
+                        ///PERSONAL POLY
+                        const auto personal_x_o = G->get_attrib_by_name<ps_personal_x_pos_att>(p_space);
+                        const auto personal_y_o = G->get_attrib_by_name<ps_personal_y_pos_att>(p_space);
+                        if( personal_x_o.has_value() and personal_y_o.has_value())
+                        {
+
+                            const std::vector<float> &personal_x = personal_x_o.value().get();
+                            const std::vector<float> &personal_y = personal_y_o.value().get();
+                            for(auto &&[point_x,point_y] : iter::zip(personal_x, personal_y))
+                            {
+                                qInfo() << __FUNCTION__ << " Personal posicion X: " << point_x << " posicion Y: " << point_y;
+                                file4<<point_x << " " <<point_y<< endl;
+                            }
+                            file4 << " "<<endl;
+                        }
+
+                        ///INTIMATE POLY
+                        const auto intimate_x_o = G->get_attrib_by_name<ps_intimate_x_pos_att>(p_space);
+                        const auto intimate_y_o = G->get_attrib_by_name<ps_intimate_y_pos_att>(p_space);
+                        if( intimate_x_o.has_value() and intimate_y_o.has_value())
+                        {
+                            const std::vector<float> &intimate_x = intimate_x_o.value().get();
+                            const std::vector<float> &intimate_y = intimate_y_o.value().get();
+                            for(auto &&[point_x,point_y] : iter::zip(intimate_x, intimate_y))
+                            {
+                                qInfo() << __FUNCTION__ << " Intimate posicion X: " << point_x << " posicion Y: " << point_y;
+                                file5<<point_x << " " <<point_y<< endl;
+                            }
+                            file5 << " "<<endl;
+                        }
+                    }
+                    file3.close();
+                    file4.close();
+                    file5.close();
+
+                }
+
+                /// MÉTRICAS OBJETOS
+                if(auto objects = G->get_nodes_by_type(object_type_name); not objects.empty())
+                {
+                    ofstream file6("objects.txt", ofstream::out);
+                    qInfo() << __FUNCTION__ << " OBJETOS: " << objects.size();
+                    for( const auto &object : objects)
+                    {
+                        auto id = object.id();
+                        auto id_parent = G->get_attrib_by_name<parent_att>(object).value();
+                        qInfo() << __FUNCTION__ << " ID: " << id << ", padre: "<<id_parent;
+                        auto padre = G->get_node(id_parent).value();
+                        auto object_pose = inner_eigen->transform(padre.name(), object.name()).value();
+                        auto depth = G->get_attrib_by_name<obj_depth_att>(object).value();
+                        auto width = G->get_attrib_by_name<obj_width_att>(object).value();
+                        auto shape = G->get_attrib_by_name<obj_interaction_shape_att>(object).value();
+
+                        std::string shape_form;
+                        for(auto s: shape.get())
+                            shape_form = shape_form + s;
+
+
+
+                        QString mostrar_forma(shape_form.c_str());
+                        qInfo() << __FUNCTION__ << " SHAPE: " << mostrar_forma << " Posicion OBJETO X: " << object_pose.x()
+                        << " Posicion OBJETO Y: " << object_pose.y() << " WIDTH: " << width << " DEPTH: " << depth ;
+
+                        file6<<shape_form<<" "<<object_pose.x() << " " <<object_pose.y()<<
+                        " " << 0 << " "<<width<<" "<<depth<<endl;
+
+                    }
+
+                    file6.close();
+                }
+                if(auto affordances = G->get_nodes_by_type(affordance_space_type_name); not affordances.empty())
+                {
+                    qInfo() << __FUNCTION__ << " AFFORDANCES: " << affordances.size();
+                    for( const auto &affordance : affordances)
+                    {
+
+                        //auto cost = G->get_attrib_by_name<cost>();
+
+                        /*auto name =G->get_attrib_by_name<name_att>(affordance).value().get();
+                        QString mostrar_nombre(name.c_str());
+                        qInfo() << mostrar_nombre;*/
+                        const auto afford_X = G->get_attrib_by_name<aff_x_pos_att>(affordance);
+                        const auto afford_Y = G->get_attrib_by_name<aff_y_pos_att>(affordance);
+                        if( afford_X.has_value() and afford_Y.has_value())
+                        {
+                            const std::vector<float> &affX = afford_X.value().get();
+                            const std::vector<float> &affY = afford_Y.value().get();
+                            for(auto &&[point_x,point_y] : iter::zip(affX, affY))
+                            {
+                                qInfo() << __FUNCTION__ << " Affordance posicion X: " << point_x << " posicion Y: " << point_y;
+                                //file5<<point_x << " " <<point_y<< endl;
+                            }
+                            qInfo() << " ";
+                            //file5 << " "<<endl;
+                        }
+
+
+
+                    }
+                }
+
+
+
+                /// MÉTRICAS - FIN
                 if(custom_widget.checkBox_cyclic->isChecked())  // cycli
                 {
                     std::random_device rd; std::mt19937 mt(rd());
@@ -456,52 +628,6 @@ void SpecificWorker::slot_start_mission()
     std::string name = custom_widget.comboBox_select_target->currentText().toStdString();
     qInfo() << __FUNCTION__ << " New mission to " << QString::fromStdString(name);
 
-
-    qInfo() << __FUNCTION__ << " Check if required agents are running " ;
-    /*     Launch Agents     */
-
-
-    const std::vector<std::string> agents { "path_follower" , "path_planner_astar"};
-    const std::map<std::string, std::string> agent_command { { "path_follower", "./bin/path_follower etc/config_viriato"},
-                                                             { "path_planner_astar", "./bin/path_planner_astar etc/config_viriato"}};
-    std::vector<std::string> connected_agents = G->get_connected_agents();
-
-    auto transform_agent_name = [](std::string &agent) {
-        //"Participant_" + agent_id ( " + agent_name + " )").data()
-        if (agent.empty()) return agent;
-        constexpr std::string_view particpant_str = std::string_view("Participant_");
-        constexpr size_t size = particpant_str.size();
-        size_t pos = agent.find(particpant_str);
-        agent.erase(pos, size); // Remove "Participant_"
-        pos = agent.find_first_of('(');
-        agent.erase(0, pos+2); // Remove from agent_id to agent_name start
-        agent.erase(agent.size()-2, 2); // Remove " )"
-        //std::cout <<" ------ |" <<  agent << "|" << std::endl;
-        return agent;
-    };
-
-    std::vector<std::string> diff;
-
-    std::transform(connected_agents.begin(), connected_agents.end(), connected_agents.begin(), transform_agent_name);
-    std::sort(connected_agents.begin(), connected_agents.end());
-    std::set_difference(agents.begin(), agents.end() , connected_agents.begin(), connected_agents.end(), std::back_inserter(diff));
-    for (std::string& agent : diff) {
-        //Ejecutar agentes.
-        qInfo() << __FUNCTION__ << " Starting " << agent.data() ;
-
-        std::string nohup = "nohup";
-        auto cd = "cd  ../" + agent;
-        //std::string pop = "popd";
-        std::string xterm = "xterm -e ";
-        std::string discard_output = ">/dev/null 2>/dev/null";
-
-        auto command =  cd + "  && " + nohup + " " + xterm + " "  + agent_command.at(agent) + " & " + discard_output;
-        std::system(command.c_str());
-    }
-
-    //if (auto node_it = std::find_if(connected_agents.begin(), connected_agents.end(), [](auto &el) { return a.}) )
-
-    /*     Mission Code      */
     if (auto node = G->get_node(name); node.has_value())
     {
         if( node.value().type() == room_type_name)

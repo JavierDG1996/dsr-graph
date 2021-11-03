@@ -1,7 +1,18 @@
 # Endpoints for implements interfaces
 AGGLPlanner.Endpoints=tcp -p 37000
 
-
+#Rules file
+#Test value = examples/logistics/domain.aggl
+aggl_file = examples/logistics/domain.aggl
+#Starting world file
+#Test value = examples/logistics/init0.xml
+init_file = examples/logistics/init0.xml
+#Goal world file
+#Test value = examples/logistics/prueba0.aggt
+aggt_goal = examples/logistics/prueba0.aggt
+#Result plan file
+#Test value = examples/logistics/resultado.plan
+result_plan = examples/logistics/resultado.plan
 
 Ice.Warn.Connections=0
 Ice.Trace.Network=0

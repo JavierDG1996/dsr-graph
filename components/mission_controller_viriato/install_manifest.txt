@@ -1,0 +1,2 @@
+/opt/robocomp/etc-default/mission_controller_viriato.conf
+/opt/robocomp/bin/mission_controller_viriato

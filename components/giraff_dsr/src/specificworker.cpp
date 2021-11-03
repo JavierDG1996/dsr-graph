@@ -42,16 +42,8 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-//	THE FOLLOWING IS JUST AN EXAMPLE
-//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
-//	try
-//	{
-//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
-//		std::string innermodel_path = par.value;
-//		innerModel = std::make_shared(innermodel_path);
-//	}
-//	catch(const std::exception &e) { qFatal("Error reading config params"); }
-
+    // TODO ESTO EN UN TRY CON .at()
+    //////////////////////////////////
 	agent_name = params["agent_name"].value;
 	agent_id = stoi(params["agent_id"].value);
 	tree_view = params["tree_view"].value == "true";
@@ -65,40 +57,35 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 void SpecificWorker::initialize(int period)
 {
 	std::cout << "Initialize worker" << std::endl;
-	this->Period = period;
-	if(this->startup_check_flag)
-		this->startup_check();
-	else
-	{
-		timer.start(Period);
-		// create graph
-		G = std::make_shared<DSR::DSRGraph>(0, agent_name, agent_id, ""); // Init nodes
-		std::cout<< __FUNCTION__ << "Graph loaded" << std::endl;  
+    // create graph
+    G = std::make_shared<DSR::DSRGraph>(0, agent_name, agent_id, ""); // Init nodes
+    std::cout<< __FUNCTION__ << "Graph loaded" << std::endl;
 
-		//dsr update signals
-		connect(G.get(), &DSR::DSRGraph::update_node_signal, this, &SpecificWorker::add_or_assign_node_slot);
-		connect(G.get(), &DSR::DSRGraph::update_edge_signal, this, &SpecificWorker::modify_edge_slot);
-		//connect(G.get(), &DSR::DSRGraph::update_node_attr_signal, this, &SpecificWorker::modify_attrs_slot);
-		connect(G.get(), &DSR::DSRGraph::del_edge_signal, this, &SpecificWorker::del_edge_slot);
-		connect(G.get(), &DSR::DSRGraph::del_node_signal, this, &SpecificWorker::del_node_slot);
+    //dsr update signals
+    connect(G.get(), &DSR::DSRGraph::update_node_signal, this, &SpecificWorker::add_or_assign_node_slot);
+    connect(G.get(), &DSR::DSRGraph::update_edge_signal, this, &SpecificWorker::modify_edge_slot);
+    //connect(G.get(), &DSR::DSRGraph::update_node_attr_signal, this, &SpecificWorker::modify_attrs_slot);
+    connect(G.get(), &DSR::DSRGraph::del_edge_signal, this, &SpecificWorker::del_edge_slot);
+    connect(G.get(), &DSR::DSRGraph::del_node_signal, this, &SpecificWorker::del_node_slot);
 
-		// Graph viewer
-		using opts = DSR::DSRViewer::view;
-		int current_opts = 0;
-		opts main = opts::none;
-		if(tree_view)
-		    current_opts = current_opts | opts::tree;
-		if(graph_view)
-		{
-		    current_opts = current_opts | opts::graph;
-		    main = opts::graph;
-		}
-		if(qscene_2d_view)
-		    current_opts = current_opts | opts::scene;
-		if(osg_3d_view)
-		    current_opts = current_opts | opts::osg;
-        graph_viewer = std::make_unique<DSR::DSRViewer>(this, G, current_opts, main);
-        setWindowTitle(QString::fromStdString(agent_name + "-") + QString::number(agent_id));
+    // Graph viewer
+    using opts = DSR::DSRViewer::view;
+    int current_opts = 0;
+    opts main = opts::none;
+    if(tree_view)
+        current_opts = current_opts | opts::tree;
+    if(graph_view)
+    {
+        current_opts = current_opts | opts::graph;
+        main = opts::graph;
+    }
+    if(qscene_2d_view)
+        current_opts = current_opts | opts::scene;
+    if(osg_3d_view)
+        current_opts = current_opts | opts::osg;
+    graph_viewer = std::make_unique<DSR::DSRViewer>(this, G, current_opts, main);
+    setWindowTitle(QString::fromStdString(agent_name + "-") + QString::number(agent_id));
+
 //        try {
 ////            float x = 3.85;
 //            float x = 0.0;
@@ -113,13 +100,18 @@ void SpecificWorker::initialize(int period)
 //        catch (const Ice::Exception &e) { std::cout << e.what() << std::endl; };
 
 
-        if(auto robot_id = G->get_id_from_name(robot_name); robot_id.has_value())
-            robot_id = robot_id.value();
-        else
-        {
-            qWarning() << "No robot node found. Terminate";
-            std::terminate();
-        }
+    if(auto robot_id = G->get_id_from_name(robot_name); robot_id.has_value())
+        robot_id = robot_id.value();
+    else
+    {
+        qWarning() << "No robot node found. Terminate";
+        std::terminate();
+    }
+	this->Period = period;
+	if(this->startup_check_flag)
+		this->startup_check();
+	else
+	{
 		this->Period = period;
 		timer.start(Period);
 	}
@@ -128,10 +120,10 @@ void SpecificWorker::compute()
 {
     update_robot_localization();
     read_battery();
-    auto camera_rgbd_frame = compute_camera_rgbd_frame();
-    update_camera_rgbd(giraff_camera_realsense_name,camera_rgbd_frame, focalx, focaly);
-    //auto camera_simple_frame = compute_camera_simple_frame();
-    //update_camera_simple(giraff_camera_usb_name, camera_simple_frame);
+//    auto camera_rgbd_frame = compute_camera_rgbd_frame();
+//    update_camera_rgbd(giraff_camera_realsense_name,camera_rgbd_frame, focalx, focaly);
+    auto camera_simple_frame = compute_camera_simple_frame();
+    update_camera_simple(giraff_camera_usb_name, camera_simple_frame);
     //auto camera_simple1_frame = compute_camera_simple1_frame();
     //update_camera_simple1(giraff_camera_face_id_name, camera_simple1_frame);
     auto laser = read_laser_from_robot();
@@ -241,14 +233,16 @@ cv::Mat SpecificWorker::compute_camera_simple_frame()
         cdata_camera_simple = camerasimple_proxy->getImage();
         //this->focalx = cdata_camera_simple.focalx;
         //this->focaly = cdata_camera_simple.focaly;
-
-        if(!cdata_camera_simple.image.empty()) {
-            camera_simple_frame = cv::imdecode(cdata_camera_simple.image, -1 );
+        if( not cdata_camera_simple.image.empty())
+        {
+            if(cdata_camera_simple.compressed)
+                camera_simple_frame = cv::imdecode(cdata_camera_simple.image, -1 );
+            else
+                camera_simple_frame = cv::Mat(cv::Size(cdata_camera_simple.width, cdata_camera_simple.height), CV_8UC3, &cdata_camera_simple.image[0], cv::Mat::AUTO_STEP);
             cv::cvtColor(camera_simple_frame, camera_simple_frame, cv::COLOR_BGR2RGB);
         }
     }
-    catch (const Ice::Exception &e){ std::cout << e.what() << std::endl;}
-
+    catch (const Ice::Exception &e){ std::cout << e.what() <<  " In compute_camera_simple_frame" << std::endl;}
     return camera_simple_frame;
 }
 
