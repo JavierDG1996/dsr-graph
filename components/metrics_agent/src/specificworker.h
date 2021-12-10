@@ -28,7 +28,7 @@
 #define SPECIFICWORKER_H
 
 #include <genericworker.h>
-#include  "../../etc/graph_names.h"
+#include  "../../../etc/graph_names.h"
 #include "dsr/api/dsr_api.h"
 #include "dsr/gui/dsr_gui.h"
 #include <doublebuffer/DoubleBuffer.h>
@@ -58,9 +58,9 @@ private:
     QVector<QPolygonF> people_social_spaces;/// MÉTRICAS
     QVector<QPolygonF> people_personal_spaces;/// MÉTRICAS
     QVector<QPolygonF> people_intimate_spaces;/// MÉTRICAS
-    QVector<int> social_cont;/// MÉTRICAS
-    QVector<int> personal_cont;/// MÉTRICAS
-    QVector<int> intimate_cont;/// MÉTRICAS
+    int social_cont;/// MÉTRICAS
+    int personal_cont;/// MÉTRICAS
+    int intimate_cont;/// MÉTRICAS
     bool intention_flag;
 
 	// DSR graph

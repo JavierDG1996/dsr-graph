@@ -115,6 +115,13 @@ void SpecificWorker::initialize(int period)
                 //people_points.append(person_points);
                 QVector<float> person_distance;
                 people_distances.append(person_distance);
+                social_cont = 0;
+                personal_cont = 0;
+                intimate_cont= 0;
+                QPolygonF poligono;
+                people_social_spaces.append(poligono);
+                people_personal_spaces.append(poligono);
+                people_intimate_spaces.append(poligono);
             }
         }
 
@@ -148,7 +155,7 @@ void SpecificWorker::initialize(int period)
 
                 }
 
-                people_social_spaces.operator[](person_id_o.value()).append(social);
+                people_social_spaces.operator[](person_id_o.value()) = social;
 
                 //VECTOR GAUSIANAS, PERSONAL ZONE
                 QPolygonF personal;
@@ -169,7 +176,7 @@ void SpecificWorker::initialize(int period)
 
                 }
 
-                people_personal_spaces.operator[](person_id_o.value()).append(personal);
+                people_personal_spaces.operator[](person_id_o.value()) = personal;
 
                 //VECTOR GAUSIANAS, INTIMATE ZONE
                 QPolygonF intimate;
@@ -190,7 +197,7 @@ void SpecificWorker::initialize(int period)
 
                 }
 
-                people_intimate_spaces.operator[](person_id_o.value()).append(intimate);
+                people_intimate_spaces.operator[](person_id_o.value()) = intimate;
 
             }
         }
@@ -237,23 +244,17 @@ void SpecificWorker::compute()
 
                     if(people_social_spaces.operator[](person_id_o.value()).containsPoint(robot_point, Qt::OddEvenFill))
                     {
-                        int cont = social_cont.operator[](person_id_o.value());
-                        cont++;
-                        social_cont.operator[](person_id_o.value()) = cont;
+                        social_cont++;
                     }
 
                     if(people_personal_spaces.operator[](person_id_o.value()).containsPoint(robot_point, Qt::OddEvenFill))
                     {
-                        int cont = personal_cont.operator[](person_id_o.value());
-                        cont++;
-                        personal_cont.operator[](person_id_o.value()) = cont;
+                        personal_cont++;
                     }
 
                     if(people_intimate_spaces.operator[](person_id_o.value()).containsPoint(robot_point, Qt::OddEvenFill))
                     {
-                        int cont = intimate_cont.operator[](person_id_o.value());
-                        cont++;
-                        intimate_cont.operator[](person_id_o.value()) = cont;
+                        intimate_cont++;
                     }
 
 
@@ -278,7 +279,7 @@ void SpecificWorker::compute()
                 file.close();
 
 
-                robot_points.clear();/// MÉTRICAS
+
 
                 /// MÉTRICAS HUMANOS
 
@@ -289,12 +290,24 @@ void SpecificWorker::compute()
                     //for( const auto &human : humans)
                     //{
                     int cont =0;
+
                     for (auto p: people_distances)
                     {
                         file2<<"TAMANIO: "<<p.size()<< endl;
+                        float minimo = 9999999;
+                        float maximo = 0;
+                        float media = 0;
                         for(auto d: p){
                             file2<<d<< endl;
+                            if(minimo > d)
+                                minimo=d;
+                            if(maximo < d)
+                                maximo=d;
+                            media += d;
                         }
+                        file2<<"avgDist: "<<media/p.size()<< endl;
+                        file2<<"minDist: "<<minimo<< endl;
+                        file2<<"maxDist: "<<maximo<< endl;
                         file2 << endl;
                         people_distances.operator[](cont).clear();
                         cont++;
@@ -313,9 +326,25 @@ void SpecificWorker::compute()
                 //people_points.clear();/// MÉTRICAS
                 intention_flag = false;
 
-                qInfo() << __FUNCTION__ << "CONT SOCIAL: " << social_cont.operator[](0);
-                qInfo() << __FUNCTION__ << "CONT PERSONAL: " << personal_cont.operator[](0);
-                qInfo() << __FUNCTION__ << "CONT INTIMO: " << intimate_cont.operator[](0);
+                qInfo() << __FUNCTION__ << "CONT SOCIAL: " << social_cont;
+                qInfo() << __FUNCTION__ << "CONT PERSONAL: " << personal_cont;
+                qInfo() << __FUNCTION__ << "CONT INTIMO: " << intimate_cont;
+                qInfo() << __FUNCTION__ << "CONT TOTAL: " << robot_points.size();
+
+                float porcentaje_social = social_cont*100.0/robot_points.size();
+                float porcentaje_personal = personal_cont*100.0/robot_points.size();
+                float porcentaje_intima = intimate_cont*100.0/robot_points.size();
+                qInfo() << __FUNCTION__ << "PORCENTAJE SOCIAL (dSoc): " << porcentaje_social << "%";
+                qInfo() << __FUNCTION__ << "PORCENTAJE PERSONAL (dPers): " << porcentaje_personal << "%";
+                qInfo() << __FUNCTION__ << "PORCENTAJE INTIMO (dInt): " << porcentaje_intima << "%";
+
+                float porcentaje_publico = 100.0 - (porcentaje_social + porcentaje_personal + porcentaje_intima);
+                qInfo() << __FUNCTION__ << "PORCENTAJE PUBLICO (dPub): " << porcentaje_publico << "%";
+
+                robot_points.clear();/// MÉTRICAS
+                social_cont = 0;
+                personal_cont = 0;
+                intimate_cont = 0;
             }
         }
 
